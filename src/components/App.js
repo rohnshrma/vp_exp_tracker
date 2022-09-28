@@ -1,10 +1,10 @@
 
-import demoData from "./expenseData.js"
-import Expenses from "./components/Expenses"
+import demoData from "../expenseData"
+import Expenses from "./Expenses/Expenses"
 import './App.css';
 import { useState } from "react";
-import NewExpense from "./components/NewExpense/NewExpense.js";
-import Card from "./components/Card"
+import NewExpense from "./NewExpense/NewExpense";
+import Card from "./UI/Card"
 
 
 

@@ -1,7 +1,9 @@
 import React from "react";
 import ExpenseItem from "./ExpenseItem";
-import ExpensesFilter from "./ExpensesFilter/ExpensesFilter";
+import ExpensesFilter from "../ExpensesFilter/ExpensesFilter";
+import ExpensesChart from "./ExpensesChart";
 import "./Expenses.css";
+
 import { useState } from "react";
 
 const Expenses = (props) => {
@@ -31,9 +33,10 @@ const Expenses = (props) => {
         selected={filteredYear}
         onChangeFilter={filterChangeHandler}
       />
+      <ExpensesChart expenses={filteredExpenses} />
 
       {filteredExpenses.length === 0 ? (
-        <p style={{ color: "#fff" }}>No Data Found</p>
+        <p style={{ color: "#fff","marginTop" : "20px" }}>No Data Found</p>
       ) : (
         filteredExpenses.map((expense) => {
           return (
